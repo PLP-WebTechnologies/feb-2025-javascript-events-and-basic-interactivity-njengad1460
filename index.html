@@ -1,66 +1,17 @@
-<!-- // modifiying elements -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DOM modifiying</title>
-    <style>
-        .highlight{
-            background-color: grey;
-            font-weight: bold;
-        }
-    </style>
+    <title>Event handling using javascipt</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1 id="mainTitle">Original Title</h1>
-    <img id="mainImage" src="DOM.png" alt="DOM IMAGE" height="250px" width ="400px">
-    
+    <!-- Button Click Event Example -->
+    <button id="myButton">Click Me!</button>
+    <p id="message"></p>
+    <script src="script.js"></script>
 
-
-    <p class="info">Paragraph 1</p>
-    <p class="info">Paragraph 2</p>
-
-    <a id="mainLink" href="#">PLP Website</a>
-
-    <script>
-        //select elements
-        const title = document.getElementById('mainTitle');
-        const image = document.getElementById('mainImage');
-        const paragraph = document.getElementsByClassName('info');
-        const link = document.getElementById('mainLink');
-
-
-        // modifiying DOM element
-        // 1. Changing Content
-        // ways to modify content in html using javascript
-        // using text contet 
-        // using inner HTML>>> this method is not safe since it tell a hacker the element you are using
-        // this encourage crose-site scripting xss
-        title.textContent="Modified title using javascript"
-
-        paragraph[0].innerHTML = "<h1> Paragraph 1 is now a header </h1>"
-
-        // 2. changing atributes
-        const oldImg = image.getAttribute('src');
-        image.setAttribute("src", "pixel.jpg");
-
-        link.setAttribute("href","https://roadmap.sh/");
-
-        // 3. Modifiying CSS using javascript
-        title.style.color = "red";
-        title.style.backgroundColor = "navy";
-        title.style.fontSize = "40px";
-        title.style.borderRadius ="20px";
-        image.style.borderRadius = "50%"
-        //mage.style.alignItems = "center"
-
-        //4. modifiying classes using javasript
-        paragraph[0].classList.add("highlight")
-        //paragraph[0].classList.remove("highlight")
-        //paragraph[0].classList.toggle("highlight")
-
-    </script>
-    
+    <img src="ball2.webp" alt="this is a ball" id="myImage">
 </body>
 </html>
