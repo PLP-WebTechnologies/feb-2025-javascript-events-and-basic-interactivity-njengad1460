@@ -57,6 +57,29 @@ function moveRight() {
 }
 img.addEventListener('click', moveRight);
 
+function animateImage() {
+    let img = document.getElementsByClassName('gallery');
+    let position = 0;
+    let interval = setInterval(frame, 10);
+    function frame() {
+        if (position == 350) {
+            clearInterval(interval);
+        } else {
+            position++;
+            img.style.top = position + 'px';
+            img.style.left = position + 'px';
+        }
+    }
+    img.style.transform = 'rotate(360deg)';
+}
+
+// 3. Form submission
+const form = document.getElementById('myForm');
+// form submission event listener
+form.addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent the default form submission
+    alert('Form submitted!');
+});
 
 
 
